@@ -12,15 +12,13 @@
           average (avg ints)]
       ["min=" minimum, "max=" maximum, "average=" average])))
 
-(def inputOne [1 2 3 4 5])
-(def inputTwo [-5 0 3 8])
-(def maxAndOthers [Integer/MAX_VALUE -8 0 33])
-(def minAndOthers [Integer/MIN_VALUE -8 0 33])
-(def empty [])
+(def inputs
+  [[1 2 3 4 5]
+  [-5 0 3 8]
+  [Integer/MAX_VALUE -8 0 33]
+  [Integer/MIN_VALUE -8 0 33]
+  []])
 
 (defn -main [& args]
-  (println (compute inputOne))
-  (println (compute inputTwo))
-  (println (compute maxAndOthers))
-  (println (compute minAndOthers))
-  (println (compute empty)))
+  (doseq [input inputs]
+    (println (compute input))))
